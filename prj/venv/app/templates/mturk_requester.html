@@ -1,0 +1,28 @@
+<!doctype html>
+<HTML>
+    <HEAD>
+        <title>Requester page</title>
+        <div align="center"><H1>Prior work / related works recommender</H1></div>
+        <div align="center">You are starting a new project. Please provide a description of what you want to create!</div>
+    </HEAD>
+
+    <form action="{{ url_for('register_request') }}" method="post">
+
+        <div align="center">
+        </div>
+
+        <div align="center">
+            <h2>Description</h2>
+            <input name="descr" type="text"></input>
+            <h2>Tags separated by commas (Provide 2-3)</h2>
+            <input name="tags" type="text"></input>
+            <div></div>
+            <input type="submit" value="Send request!"></input>
+        </div>
+
+    </form>
+
+    <body>
+
+    </body>
+</HTML>
