@@ -16,13 +16,17 @@ def register_request():
     print("registering request...")
 
     print("description: " + request.form['descr'])
-    print("tags: " + request.form['tags'])
+    print("time: " + request.form['hours'] + "hrs")
 
-    html_content_extractor.update_request(request.form['descr'], request.form['tags'])
+    #update request description/query
+    html_content_extractor.update_request(request.form['descr'])
+
+
+
 
     return render_template("mturk_request_complete.html")
 
-@app.route('register_response', methods=['POST'])
+@app.route('/register_response', methods=['POST'])
 def register_response():
     print("registering response...")
 

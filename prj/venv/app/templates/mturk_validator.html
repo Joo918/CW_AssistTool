@@ -13,11 +13,11 @@
 	
 	<div align="center">
 		<H3>
-			The description below describes a creative writing project idea.
-			Please provide a URL containing a related written work that you thought was creative or unique.
-			It can be any online web page containing text. (Short story, a blog post, news article, forum post, etc)
-			Your response should be relevant to the topic.
-			Please make sure to test that the URL correctly leads to the creative content.
+			Copy and paste the URL below in a new Internet browser tab to view a webpage with some written content.
+			Please read the content and judge whether it was creative or not. To help you make the judgement,
+			you can check if:<br>
+			- The content is original or unique<br>
+			- Has a base in one domain or field<br>
 		</H3>
 	</div>
 	
@@ -25,13 +25,20 @@
     <input type='hidden' value='' name='assignmentId' id='assignmentId'/>
 
         <div align="center">
-            <h2>DESCRIPTION</h2>
-            $question
+            <a>$link</a>
         </div>
 
         <div align="center">
-            <h2>Enter an URL with a relevent article or blog post.</h2>
-            <input type="text" name="response_url"></input>
+            <h2>Choose "is creative" if the content was creative and "is not creative" if it wasn't.</h2>
+            <select name="validation_vote">
+				<option value=1>Is Creative</option>
+				<option value=0>Is Not Creative</option>
+			</select>
+			
+			<h2>Please provide a summary of the content. If the summary is not relevant to the content, your work will be rejected.</h2>
+			<textarea form="mturk_form" name="summary" type="text" rows="5" cols="100"></textarea>
+			<br>
+			<br>
             <input type="submit" id='submitButton' value='Submit'></input>
         </div>
 

@@ -1,21 +1,21 @@
 <!doctype html>
 <HTML>
     <HEAD>
-        <title>Requester page</title>
-        <div align="center"><H1>Prior work / related works recommender</H1></div>
-        <div align="center">You are starting a new project. Please provide a description of what you want to create!</div>
+        <title>CPWE</title>
+        <div align="center"><H1>Creative Prior Works Explorer (CPWE)</H1></div>
+        <div align="center"><H3>Please provide a description of what you want to write about! A specific description containing keywords is encouraged to improve the quality of the search results.</H3></div>
     </HEAD>
 
-    <form action="{{ url_for('register_request') }}" method="post">
+    <form id="reqForm" action="{{ url_for('register_request') }}" method="post">
 
         <div align="center">
         </div>
 
         <div align="center">
-            <h2>Description</h2>
-            <input name="descr" type="text"></input>
-            <h2>Tags separated by commas (Provide 2-3)</h2>
-            <input name="tags" type="text"></input>
+            <h2>Description of the project</h2>
+            <textarea form="reqForm" name="descr" type="text" rows="5" cols="100"></textarea>
+            <h2>How long are you willing to wait for the results to be collected (in hours between 1 and 72)?</h2>
+            <input name="hours" type="number" min="1" max="72"></input>
             <div></div>
             <input type="submit" value="Send request!"></input>
         </div>
